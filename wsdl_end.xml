@@ -1,0 +1,14 @@
+  <!-- wsdl:service names a new service "EndorsementSearchService" -->
+  <wsdl:service name="EndorsementSearchService">
+    <wsdl:documentation>snowboarding-info.com Endorsement Service</wsdl:documentation> 
+
+    <!-- connect it to the binding "EndorsementSearchSoapBinding" above -->
+    <wsdl:port name="GetEndorsingBoarderPort"
+               binding="es:EndorsementSearchSoapBinding">
+
+      <!-- give the binding an network address -->
+      <soap:address location="http://www.snowboard-info.com/EndorsementSearch"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>
