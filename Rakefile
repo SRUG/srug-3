@@ -3,11 +3,11 @@ require "rake/clean"
 task :default => [:evince]
 
 SRC = "presentation.tex"
-RUBY_SRC = FileList["*.rb"]
-ERB_SRC = FileList["*.rhtml"]
-HTML_SRC = FileList["*.html"]
-XML_SRC = FileList["*.xml"]
-SVG_IMG =  FileList["*.svg"]
+RUBY_SRC = FileList["**/*.rb"]
+ERB_SRC = FileList["**/*.rhtml"]
+HTML_SRC = FileList["**/*.html"]
+XML_SRC = FileList["**/*.xml"]
+SVG_IMG =  FileList["**/*.svg"]
 
 CLEAN.include(%w(*.toc *.aux *.log *.lof *.bib *.bbl *.blg *.out *.snm *.vrb *.nav),
               RUBY_SRC.ext("tex"),

@@ -1,159 +1,43 @@
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    Web services
-  \end{center}
-\end{frame}
+\centeredFrame{Web services}{Web services}
+\centeredFrame{Web services}{what exactly are web services?}
+\centeredFrame{Web services}{API for web applications}
+\itemizedFrame{Web services}{
+\item weather
+\item sport results
+\item stock market
+}
+\centeredFrame{Web services}{a bit of history}
+\centeredFrame{Web services}{Remote Procedure Call}
+\centeredFrame{Web services}{XML-RPC}
+\centeredFrame{Web services}{uses XML over HTTP}
 
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    what exactly are web services?
-  \end{center}
-\end{frame}
+\inputFrame{Web services}{files/xml_rpc_request}
+\inputFrame{Web services}{files/xml_rpc_response}
 
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    API for web applications
-  \end{center}
-\end{frame}
+\centeredFrame{Web services}{this evolved into}
+\centeredFrame{Web services}{SOAP}
+\centeredFrame{Web services}{\alert{Simple} Object Access Protocol}
+\centeredFrame{Web services}{this acronym was dropped with Version 1.2 of the standard}
+\itemizedFrame{Web services}{
+\item it was confused with SOA
+\item it’s not that simple after all
+}
+\centeredFrame{Web services}{uses XML over HTTP}
 
-\begin{frame}
-  \frametitle{Web services}
-  \begin{itemize}
-  \item weather
-  \item sport results
-  \item stock market
-  \item \alert{some more serious examples}
-  \end{itemize}
-\end{frame}
+\inputFrame{Web services}{files/soap_response}
+\inputFrame{Web services}{files/soap_request}
 
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    a bit of history
-  \end{center}
-\end{frame}
+\centeredFrame{Web services}{services are defined using\\Web Services Description Language\\(WSDL)}
+\itemizedFrame{Web services}{
+\item lets tools create client APIs
+  \note{MS employee saying they made SOAP so complex, to be not
+    human readable}
+\item client developers see methods with parameters
+}
 
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    Remote Procedure Call
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    XML-RPC
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    uses XML over HTTP
-  \end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{xml_rpc_request}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{xml_rpc_response}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    this evolved into
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    SOAP
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    \alert{Simple} Object Access Protocol
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    this acronym was dropped with Version 1.2 of the standard
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{itemize}
-  \item it was confused with SOA
-  \item it’s not that simple after all
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    uses XML over HTTP
-  \end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{soap_request}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{soap_response}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    services are defined using\\Web Services Description Language\\(WSDL)
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{itemize}
-  \item lets tools create client APIs
-    \note{MS employee saying they made SOAP so complex, to be not
-      human readable}
-  \item client developers see methods with parameters
-  \end{itemize}
-\end{frame}
-
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{wsdl_begin}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    ... about 100 lines of XML later ...
-  \end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Web services}
-  \tiny \input{wsdl_end}
-\end{frame}
+\inputFrame{Web services}{files/wsdl_begin}
+\centeredFrame{Web services}{... about 100 lines of XML later ...}
+\inputFrame{Web services}{files/wsdl_end}
 
 \begin{frame}
   \frametitle{Web services}
@@ -172,93 +56,45 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[plain]
-  \begin{changemargin}{-1cm}{-1cm}
-    \begin{center}
-      \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{images/WS-Standards-Poster.jpg}
-    \end{center}
-  \end{changemargin}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    service oriented design
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
+\imageFrame{images/WS-Standards-Poster.jpg}
+\centeredFrame{Web services}{service oriented design}
+\itemizedFrame{Web services}{
+\item UserManager
   \begin{itemize}
-  \item UserManager
-    \begin{itemize}
-    \item createUser(u:User)
-    \item getUserDetails(id:ID)
-    \end{itemize}
-  \item StatusManager
-    \begin{itemize}
-    \item submitStatus(u\_id:ID, s:Status)
-    \item getStatusDetails(u\_id:ID)
-    \end{itemize}
+  \item createUser(u:User)
+  \item getUserDetails(id:ID)
   \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
+\item StatusManager
   \begin{itemize}
-  \item Pros
-    \begin{itemize}
-    \item it's a standard
-    \item strong typing
-    \item \alert{dopisac kolejne}
-    \end{itemize}
-  \item Cons
-    \begin{itemize}
-    \item complex
-    \item strong typing
-    \item \alert{dopisac kolejne}
-    \end{itemize}
+  \item submitStatus(u\_id:ID, s:Status)
+  \item getStatus(u\_id:ID)
   \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    not everyone needs enterprisey and complex web services
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    you don't have to use SOAP
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
-  \begin{center}
-    others don't
-  \end{center}
-\end{frame}
-
-\begin{frame}[plain]
-  \begin{changemargin}{-1cm}{-1cm}
-    \begin{center}
-      \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{images/dirty-harry.jpg}
-    \end{center}
-  \end{changemargin}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Web services}
+}
+\itemizedFrame{Web services}{
+\item Pros % add some more
   \begin{itemize}
-  \item Amazon Web Services - provides both
-    \begin{itemize}
-    \item 20\% uses SOAP
-    \item 80\% uses REST
-    \end{itemize}
-  \item Google Search API - deprecated SOAP in favor of REST
-  \item Yahoo API - uses REST only
+  \item it's a standard
+  \item strong typing
   \end{itemize}
-\end{frame}
+\item Cons
+  \begin{itemize}
+  \item complex
+  \item strong typing
+  \item XML is not best data format for the web
+  \item uses HTTP POST only
+  \item non-uniform interface
+  \end{itemize}
+}
+\centeredFrame{Web services}{not everyone needs enterprisey and complex web services}
+\centeredFrame{Web services}{you don't have to use SOAP}
+\centeredFrame{Web services}{others don't}
+\imageFrame{images/dirty-harry.jpg}
+\itemizedFrame{Web services}{
+\item Amazon Web Services - provides both
+  \begin{itemize}
+  \item 20\% uses SOAP
+  \item 80\% uses REST
+  \end{itemize}
+\item Google Search API - deprecated SOAP in favor of REST
+\item Yahoo API - uses REST only
+}

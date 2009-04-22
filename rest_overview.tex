@@ -1,21 +1,245 @@
+% INTRO
+\centeredFrame{REST}{REST}
+\centeredFrame{REST}{\alert{RE}presentational \alert{S}tate \alert{T}ransfer}
+
+\imageFrame{images/homer-on-couch.jpg}
+
+\begin{frame}
+  \frametitle{REST}
+  introduced by Roy Fielding, who also worked on the following specifications:
+  \begin{itemize}
+    \item URI
+    \item HTTP
+    \item HTML
+  \end{itemize}
+\end{frame}
+
+\centeredFrame{REST}{very short demo} % fetch status in XML from a browser
+
+% RESOURCES - nouns
+\centeredFrame{REST}{URI}
+\centeredFrame{REST}{resources}
+\centeredFrame{REST}{uniquely addressable using URIs}
+\centeredFrame{REST}{http://localhost/users/1}
+\centeredFrame{REST}{http://localhost/users/1/statuses/1}
+\centeredFrame{REST}{http://localhost/users}
+\centeredFrame{REST}{http://localhost/users/1/statuses}
+
+% HTTP - verbs
+\centeredFrame{REST}{HTTP}
+\centeredFrame{REST}{CRUD}
+\begin{frame}
+  \frametitle{REST}
+  \begin{columns}
+    \begin{column}{2cm}
+      \begin{center}
+      \end{center}
+      CREATE\\
+      READ\\
+      UPDATE\\
+      DELETE
+    \end{column}    
+    \begin{column}{2cm}      
+    \end{column}
+    \begin{column}{2cm}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{columns}
+    \begin{column}{2cm}
+      \begin{center}
+      \end{center}
+      CREATE\\
+      READ\\
+      UPDATE\\
+      DELETE
+    \end{column}    
+    \begin{column}{2cm}
+      \begin{center}
+        SQL
+      \end{center}
+      INSERT\\
+      SELECT\\
+      UPDATE\\
+      DELETE
+    \end{column}
+    \begin{column}{2cm}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{columns}
+    \begin{column}{2cm}
+      \begin{center}        
+      \end{center}
+      CREATE\\
+      READ\\
+      UPDATE\\
+      DELETE
+    \end{column}    
+    \begin{column}{2cm}
+      \begin{center}
+        SQL
+      \end{center}
+      INSERT\\
+      SELECT\\
+      UPDATE\\
+      DELETE
+    \end{column}
+    \begin{column}{2cm}   
+      \begin{center}
+        HTTP
+      \end{center}
+      \uncover<2->{POST}\\
+      \uncover<3->{GET}\\
+      \uncover<4->{PUT}\\
+      \uncover<5->{DELETE}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\centeredFrame{REST}{think of REST as a sentence}
+\centeredFrame{REST}{HTTP actions are verbs}
+\centeredFrame{REST}{resources' URIs are nouns}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{columns}
+    \begin{column}{.3\textwidth}
+      \begin{flushright}
+      \uncover<2->{POST\\}
+      GET\\
+      PUT\\
+      DELETE
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.7\textwidth}
+      \begin{flushleft}
+      \uncover<2->{http://localhost/users\\}
+      http://localhost/users/1\\
+      http://localhost/users/1\\
+      http://localhost/users/1\\
+      \end{flushleft}
+    \end{column}    
+    \end{columns}
+\end{frame}
+
+\centeredFrame{REST}{uniform interface to interact with resources}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{columns}
+    \begin{column}{.3\textwidth}
+      \begin{flushright}
+      POST\\
+      GET\\
+      PUT\\
+      DELETE
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.7\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1/statuses\\
+      http://localhost/users/1/statuses/1\\
+      http://localhost/users/1/statuses/1\\
+      http://localhost/users/1/statuses/1\\
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
+\end{frame}
+
+% REPRESENTATION
+\centeredFrame{REST}{resources can have many representations}
+\imageFrame{images/cohen-representations.jpg}
+
 \begin{frame}
   \frametitle{REST}
   \begin{center}
-    REST
+  ``Get HTML representation of user with ID 1''
   \end{center}
+  \begin{columns}
+    \begin{column}{.2\textwidth}
+      \begin{flushright}
+      GET\\
+      GET
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.8\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1\alert{.html}\\
+      \alert{Accept: text/html} http://localhost/users/1
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{REST}
   \begin{center}
-    \alert{RE}presentational \alert{S}tate \alert{T}ransfer
+  ``Get XML representation of user with ID 1''
   \end{center}
+  \begin{columns}
+    \begin{column}{.2\textwidth}
+      \begin{flushright}
+      GET\\
+      GET
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.8\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1\alert{.xml}\\
+      \alert{Accept: application/xml} http://localhost/users/1
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
 \end{frame}
 
-\begin{frame}[plain]
-  \begin{changemargin}{-1cm}{-1cm}
-    \begin{center}
-      \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{images/homer-on-couch.jpg}
-    \end{center}
-  \end{changemargin}
+\begin{frame}
+  \frametitle{REST}
+  \begin{center}
+  ``Get JSON representation of user with ID 1''
+  \end{center}
+  \begin{columns}
+    \begin{column}{.2\textwidth}
+      \begin{flushright}
+      GET\\
+      GET
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.8\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1\alert{.json}\\
+      \alert{Accept: application/json} http://localhost/users/1
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
 \end{frame}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{center}
+  ``Get vCard representation of user with ID 1''
+  \end{center}
+  \begin{columns}
+    \begin{column}{.2\textwidth}
+      \begin{flushright}
+      GET\\
+      GET
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.8\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1\alert{.vcf}\\
+      \alert{Accept: text/x-vCard} http://localhost/users/1
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
+\end{frame}
+
+% not a specification, bla bla bla
+\centeredFrame{REST}{}
