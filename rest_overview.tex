@@ -32,9 +32,7 @@
   \frametitle{REST}
   \begin{columns}
     \begin{column}{2cm}
-      \begin{center}
-        ACTION
-      \end{center}
+      \begin{center}ACTION\end{center}
       CREATE\\
       READ\\
       UPDATE\\
@@ -51,18 +49,14 @@
   \frametitle{REST}
   \begin{columns}
     \begin{column}{2cm}
-      \begin{center}
-        ACTION
-      \end{center}
+      \begin{center}ACTION\end{center}
       CREATE\\
       READ\\
       UPDATE\\
       DELETE
     \end{column}    
     \begin{column}{2cm}
-      \begin{center}
-        SQL
-      \end{center}
+      \begin{center}SQL\end{center}
       INSERT\\
       SELECT\\
       UPDATE\\
@@ -77,27 +71,21 @@
   \frametitle{REST}
   \begin{columns}
     \begin{column}{2cm}
-      \begin{center}
-        ACTION
-      \end{center}
+      \begin{center}ACTION\end{center}
       CREATE\\
       READ\\
       UPDATE\\
       DELETE
     \end{column}    
     \begin{column}{2cm}
-      \begin{center}
-        SQL
-      \end{center}
+      \begin{center}SQL\end{center}
       INSERT\\
       SELECT\\
       UPDATE\\
       DELETE
     \end{column}
     \begin{column}{2cm}   
-      \begin{center}
-        HTTP
-      \end{center}
+      \begin{center}HTTP\end{center}
       \uncover<2->{POST}\\
       \uncover<3->{GET}\\
       \uncover<4->{PUT}\\
@@ -163,27 +151,6 @@
 \begin{frame}
   \frametitle{REST}
   \begin{center}
-  ``Get HTML representation of user with ID 1''
-  \end{center}
-  \begin{columns}
-    \begin{column}{.2\textwidth}
-      \begin{flushright}
-      GET\\
-      GET
-      \end{flushright}
-    \end{column}    
-    \begin{column}{.8\textwidth}
-      \begin{flushleft}
-      http://localhost/users/1\alert{.html}\\
-      \alert{Accept: text/html} http://localhost/users/1
-      \end{flushleft}
-    \end{column}    
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{REST}
-  \begin{center}
   ``Get XML representation of user with ID 1''
   \end{center}
   \begin{columns}
@@ -226,6 +193,27 @@
 \begin{frame}
   \frametitle{REST}
   \begin{center}
+  ``Get HTML representation of user with ID 1''
+  \end{center}
+  \begin{columns}
+    \begin{column}{.2\textwidth}
+      \begin{flushright}
+      GET\\
+      GET
+      \end{flushright}
+    \end{column}    
+    \begin{column}{.8\textwidth}
+      \begin{flushleft}
+      http://localhost/users/1\alert{.html}\\
+      \alert{Accept: text/html} http://localhost/users/1
+      \end{flushleft}
+    \end{column}    
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{REST}
+  \begin{center}
   ``Get vCard representation of user with ID 1''
   \end{center}
   \begin{columns}
@@ -244,5 +232,4 @@
   \end{columns}
 \end{frame}
 
-% not a specification, bla bla bla
-\centeredFrame{REST}{}
+\centeredFrame{REST}{REST is not a standard\\it's a style of software architecture}

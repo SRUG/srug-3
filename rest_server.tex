@@ -1,0 +1,139 @@
+\imageFrame{images/rest-in-rails.jpg}
+\centeredFrame{REST in Rails}{REST in Rails}
+\centeredFrame{REST in Rails}{in Rails it's easier to build RESTful apps\\than not to}
+
+\centeredFrame{REST in Rails}{quick demo}
+% create Rails app, scaffold posts, turn off forgery protection
+% curl -X POST -H 'Accept: application/xml' -d post[title]='test' -d post[body]='test' http://localhost:3000/posts
+% curl -X GET -H 'Accept: application/xml' http://localhost:3000/posts/x
+% curl -X PUT -H 'Accept: application/xml' -d post[title]='updated with curl' http://localhost:3000/posts/x
+% curl -X GET -H 'Accept: application/xml' http://localhost:3000/posts/x
+% curl -X DELETE -H 'Accept: application/xml' http://localhost:3000/posts/x
+
+\centeredFrame{REST in Rails}{how does it work?}
+
+\begin{frame}
+  \frametitle{REST in Rails}
+  \begin{columns}
+    \begin{column}{3cm}
+      \begin{center}REST actions\\\end{center}
+        POST\\
+        GET\\
+        PUT\\
+        DELETE
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{REST in Rails}
+  \begin{columns}
+    \begin{column}{3cm}
+      \begin{center}Rails actions\\\end{center}
+        create\\
+        show\\
+        update\\
+        destroy\\
+        \uncover<2->{new\\}
+        \uncover<2->{edit\\}
+        \uncover<2->{index\\}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\centeredFrame{REST in Rails}{7 default actions}
+
+\begin{frame}
+  \frametitle{REST in Rails}
+  \begin{columns}
+    \begin{column}{2.5cm}
+      \begin{center}Rails actions\\\end{center}
+        create\\
+        show\\
+        update\\
+        destroy\\
+        index\\
+        new\\
+        edit
+    \end{column}
+    \begin{column}{3.5cm}
+      \begin{center}HTTP request\\\end{center}
+        \begin{columns}
+          \begin{column}{1.5cm}
+            POST\\
+            GET\\
+            PUT\\
+            DELETE\\
+            GET\\
+            GET\\
+            GET
+          \end{column}
+          \begin{column}{2cm}
+            /users\\
+            /users/1\\
+            /users/1\\
+            /users/1\\
+            /users\\
+            /users/1/new\\
+            /users/1/edit
+          \end{column}
+        \end{columns}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\centeredFrame{REST in Rails}{how does Rails knows how to map URI to action?}
+\centeredFrame{REST in Rails}{routes}
+
+\formattedInputFrame{config/routes.rb}{}{files/routes}
+
+\centeredFrame{REST in Rails}{
+  generates mapping for 7 default actions\\
+  for user resource
+}
+
+\centeredFrame{REST in Rails}{
+  generates helper methods for 7 default actions\\
+  for user resource
+}
+
+\begin{frame}
+  \frametitle{REST in Rails}
+  \begin{columns}
+    \begin{column}{2cm}
+      \begin{center}Rails actions\end{center}
+        create\\
+        show\\
+        update\\
+        destroy\\
+        index\\
+        new\\
+        edit
+    \end{column}
+    \begin{column}{2cm}
+      \begin{center}URI\end{center}
+      /users\\
+      /users/1\\
+      /users/1\\
+      /users/1\\
+      /users\\
+      /users/1/new\\
+      /users/1/edit
+    \end{column}
+    \begin{column}{2cm}
+      \begin{center}helpers\end{center}
+        users\_path\\
+        user\_path(1)\\
+        user\_path(1)\\
+        user\_path(1)\\
+        users\_path\\
+        new\_user\_path\\
+        edit\_user\_path(1)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\centeredFrame{REST in Rails}{resource representations}
+\centeredFrame{REST in Rails}{respond\_to}
+
+\formattedInputFrame{app/controllers/users\_controller.rb}{\small}{files/respond-to}

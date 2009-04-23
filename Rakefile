@@ -11,10 +11,10 @@ SVG_IMG =  FileList["**/*.svg"]
 
 CLEAN.include(%w(*.toc *.aux *.log *.lof *.bib *.bbl *.blg *.out *.snm *.vrb *.nav),
               RUBY_SRC.ext("tex"),
+              ERB_SRC.ext("tex"),
               HTML_SRC.ext("tex"),
               XML_SRC.ext("tex"),
-              SVG_IMG.ext("png"),
-              ERB_SRC.ext("tex"))
+              SVG_IMG.ext("png"))
 
 CLOBBER.include(%w(pdf dvi ps).collect { |e| SRC.ext(e) })
 
@@ -46,7 +46,7 @@ rule ".pdf" => ".tex" do |t|
   pdflatex(t.source)
 end
 
-file SRC.ext("pdf") => [SRC] + XML_SRC.ext("tex") + RUBY_SRC.ext("tex") + HTML_SRC.ext("tex") + SVG_IMG.ext("png") + ERB_SRC.ext("tex")
+file SRC.ext("pdf") => [SRC] + RUBY_SRC.ext("tex") + ERB_SRC.ext("tex") + HTML_SRC.ext("tex") + XML_SRC.ext("tex") + SVG_IMG.ext("png")
 
 desc "Compile PDF"
 task :pdf => SRC.ext("pdf")
