@@ -12,45 +12,39 @@
 \usetheme{Pittsburgh}
 
 \newcommand{\centeredFrame}[2]{
-  \begin{frame}
+  \frame{
     \frametitle{{#1}}
     \begin{center}
       {#2}
     \end{center}
-  \end{frame}
+  }
 }
 
-\newcommand{\itemizedFrame}[2]{
-  \begin{frame}
+\newcommand{\itemizedFrame}[3]{
+  \frame{
     \frametitle{{#1}}
+    {#2}
     \begin{itemize}
-      {#2}
+      {#3}
     \end{itemize}
-  \end{frame}
+  }
 }
 
 \newcommand{\imageFrame}[1]{
-  \begin{frame}[plain]
+  \frame[plain]{
     \begin{changemargin}{-1cm}{-1cm}
       \begin{center}
         \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#1}
       \end{center}
     \end{changemargin}
-  \end{frame}
+  }
 }
 
-\newcommand{\inputFrame}[2]{
-  \begin{frame}
-    \frametitle{{#1}}
-    \tiny \input {#2}
-  \end{frame}
-}
-
-\newcommand{\formattedInputFrame}[3]{
-  \begin{frame}
+\newcommand{\inputFrame}[3]{
+  \frame{
     \frametitle{{#1}}
     {#2} \input {#3}
-  \end{frame}
+  }
 }
 
 \author{Silesian Ruby Users' Group\\
