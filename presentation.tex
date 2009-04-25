@@ -11,21 +11,21 @@
 
 \usetheme{Pittsburgh}
 
-\newcommand{\centeredFrame}[2]{
+\newcommand{\centeredFrame}[1]{
   \frame{
-    \frametitle{{#1}}
+    \frametitle{\insertsection}
     \begin{center}
-      {#2}
+      {#1}
     \end{center}
   }
 }
 
-\newcommand{\itemizedFrame}[3]{
+\newcommand{\itemizedFrame}[2]{
   \frame{
-    \frametitle{{#1}}
-    {#2}
+    \frametitle{\insertsection}
+    {#1}
     \begin{itemize}
-      {#3}
+      {#2}
     \end{itemize}
   }
 }
@@ -43,7 +43,7 @@
 \newcommand{\inputFrame}[3]{
   \frame{
     \frametitle{{#1}}
-    {#2} \input {#3}
+    {#2} \input {#3} % FIXME formatting {#2} doesn't work anymore
   }
 }
 

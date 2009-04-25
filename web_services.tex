@@ -1,45 +1,44 @@
-\centeredFrame{Web services}{Web services}
-\centeredFrame{Web services}{what exactly are web services?}
-\centeredFrame{Web services}{API for web applications}
-\itemizedFrame{Web services}{examples:}{
+\section{Web services}
+
+\centeredFrame{Web services}
+\centeredFrame{what exactly are web services?}
+\centeredFrame{API for web applications}
+\itemizedFrame{examples}{
 \item weather
 \item sport results
 \item stock market
 }
-\centeredFrame{Web services}{a bit of history}
-\centeredFrame{Web services}{Remote Procedure Call}
-\centeredFrame{Web services}{XML-RPC}
-\centeredFrame{Web services}{uses XML over HTTP}
+\centeredFrame{a bit of history}
+\centeredFrame{Remote Procedure Call}
+\centeredFrame{XML-RPC}
+\centeredFrame{uses XML over HTTP}
 
-\inputFrame{Web services}{\tiny}{files/xml_rpc_request}
-\inputFrame{Web services}{\tiny}{files/xml_rpc_response}
+\inputFrame{XML RPC sample request}{``\tiny''}{files/xml_rpc_request}
+\inputFrame{XML RPC sample response}{\tiny}{files/xml_rpc_response}
 
-\centeredFrame{Web services}{this evolved into}
-\centeredFrame{Web services}{SOAP}
-\centeredFrame{Web services}{\alert{Simple} Object Access Protocol}
-\centeredFrame{Web services}{this acronym was dropped with Version 1.2 of the standard}
-\itemizedFrame{Web services}{}{
+\centeredFrame{this evolved into}
+\centeredFrame{SOAP}
+\centeredFrame{\alert{Simple} Object Access Protocol}
+\itemizedFrame{this acronym was dropped with Version 1.2 of the standard}{
 \item it was confused with SOA
 \item it’s not that simple after all
 }
-\centeredFrame{Web services}{uses XML over HTTP}
+\centeredFrame{uses XML over HTTP}
 
-\inputFrame{Web services}{\tiny}{files/soap_response}
-\inputFrame{Web services}{\tiny}{files/soap_request}
+\inputFrame{SOAP sample request}{\tiny}{files/soap_request}
+\inputFrame{SOAP sample response}{\tiny}{files/soap_response}
 
-\centeredFrame{Web services}{services are defined using\\Web Services Description Language\\(WSDL)}
-\itemizedFrame{Web services}{}{
+\centeredFrame{services are defined using\\Web Services Description Language\\(WSDL)}
+\itemizedFrame{}{
 \item lets tools create client APIs
-  \note{MS employee saying they made SOAP so complex, to be not
-    human readable}
 \item client developers see methods with parameters
 }
 
-\inputFrame{Web services}{\tiny}{files/wsdl_begin}
-\centeredFrame{Web services}{... about 100 lines of XML later ...}
-\inputFrame{Web services}{\tiny}{files/wsdl_end}
+\inputFrame{WSDL sample}{\tiny}{files/wsdl_begin}
+\centeredFrame{... about 100 lines of XML later ...}
+\inputFrame{WSDL sample}{\tiny}{files/wsdl_end}
 
-\itemizedFrame{Web service}{WS-* specifications:}{
+\itemizedFrame{WS-* specifications}{
   \item WS-Addressing
   \item WS-Security
   \item WS-Trust
@@ -53,8 +52,8 @@
 }
 
 \imageFrame{images/WS-Standards-Poster.jpg}
-\centeredFrame{Web services}{service oriented design}
-\itemizedFrame{Web services}{}{
+\centeredFrame{service oriented design}
+\itemizedFrame{}{
 \item UserManager
   \begin{itemize}
   \item createUser(u:User)
@@ -66,18 +65,18 @@
   \item getStatus(u\_id:ID)
   \end{itemize}
 }
-\itemizedFrame{Web services}{Cons of SOAP services:}{
+\itemizedFrame{Cons of SOAP services:}{
   \item complex
   \item strong typing
   \item XML is not necessarily the best data format for the web
   \item non-uniform interface
   \item uses HTTP POST only
 }
-\centeredFrame{Web services}{not everyone needs enterprisey and complex web services}
-\centeredFrame{Web services}{you don't have to use SOAP}
-\centeredFrame{Web services}{others don't}
+\centeredFrame{not everyone needs enterprisey and complex web services}
+\centeredFrame{you don't have to use SOAP}
+\centeredFrame{others don't}
 \imageFrame{images/dirty-harry.jpg}
-\itemizedFrame{Web services}{}{
+\itemizedFrame{}{
 \item Amazon Web Services - provides both
   \begin{itemize}
   \item 20\% uses SOAP

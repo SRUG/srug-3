@@ -1,8 +1,10 @@
-\imageFrame{images/rest-in-rails.jpg}
-\centeredFrame{REST in Rails}{REST in Rails}
-\centeredFrame{REST in Rails}{in Rails it's easier to build RESTful apps\\than not to}
+\section{REST in Rails}
 
-\centeredFrame{REST in Rails}{quick demo}
+\imageFrame{images/rest-in-rails.jpg}
+\centeredFrame{REST in Rails}
+\centeredFrame{in Rails it's easier to build RESTful apps\\than not to}
+
+\centeredFrame{quick demo}
 % create Rails app, scaffold posts, turn off forgery protection
 % curl -X POST -H 'Accept: application/xml' -d post[title]='test' -d post[body]='test' http://localhost:3000/posts
 % curl -X GET -H 'Accept: application/xml' http://localhost:3000/posts/x
@@ -10,10 +12,10 @@
 % curl -X GET -H 'Accept: application/xml' http://localhost:3000/posts/x
 % curl -X DELETE -H 'Accept: application/xml' http://localhost:3000/posts/x
 
-\centeredFrame{REST in Rails}{how does it work?}
+\centeredFrame{how does it work?}
 
 \begin{frame}
-  \frametitle{REST in Rails}
+  \frametitle{\insertsection}
   \begin{columns}
     \begin{column}{3cm}
       \begin{center}REST actions\\\end{center}
@@ -26,7 +28,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{REST in Rails}
+  \frametitle{\insertsection}
   \begin{columns}
     \begin{column}{3cm}
       \begin{center}Rails actions\\\end{center}
@@ -41,10 +43,10 @@
   \end{columns}
 \end{frame}
 
-\centeredFrame{REST in Rails}{7 default actions}
+\centeredFrame{7 default actions}
 
 \begin{frame}
-  \frametitle{REST in Rails}
+  \frametitle{\insertsection}
   \begin{columns}
     \begin{column}{2.5cm}
       \begin{center}Rails actions\\\end{center}
@@ -82,23 +84,23 @@
   \end{columns}
 \end{frame}
 
-\centeredFrame{REST in Rails}{how does Rails knows how to map URI to action?}
-\centeredFrame{REST in Rails}{routes}
+\centeredFrame{how does Rails knows how to map URI to action?}
+\centeredFrame{routes}
 
 \inputFrame{config/routes.rb}{}{files/routes}
 
-\centeredFrame{REST in Rails}{
+\centeredFrame{
   generates mapping for 7 default actions\\
   for user resource
 }
 
-\centeredFrame{REST in Rails}{
+\centeredFrame{
   generates helper methods for 7 default actions\\
   for user resource
 }
 
 \begin{frame}
-  \frametitle{REST in Rails}
+  \frametitle{\insertsection}
   \begin{columns}
     \begin{column}{2cm}
       \begin{center}Rails actions\end{center}
@@ -133,7 +135,7 @@
   \end{columns}
 \end{frame}
 
-\centeredFrame{REST in Rails}{resource representations}
-\centeredFrame{REST in Rails}{respond\_to}
+\centeredFrame{resource representations}
+\centeredFrame{respond\_to}
 
 \inputFrame{app/controllers/users\_controller.rb}{\small}{files/respond-to}
