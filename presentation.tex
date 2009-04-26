@@ -4,54 +4,17 @@
 \usepackage{graphicx}
 \usepackage{color}
 
+\usetheme{Pittsburgh}
 \usenavigationsymbolstemplate{} % turn off navigation icons
+\setbeamercovered{transparent}
 
 \input{pygments}
 \input{changemargin}
-
-\usetheme{Pittsburgh}
-
-\newcommand{\centeredFrame}[1]{
-  \frame{
-    \frametitle{\insertsection}
-    \begin{center}
-      {#1}
-    \end{center}
-  }
-}
-
-\newcommand{\itemizedFrame}[2]{
-  \frame{
-    \frametitle{\insertsection}
-    {#1}
-    \begin{itemize}
-      {#2}
-    \end{itemize}
-  }
-}
-
-\newcommand{\imageFrame}[1]{
-  \frame[plain]{
-    \begin{changemargin}{-1cm}{-1cm}
-      \begin{center}
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#1}
-      \end{center}
-    \end{changemargin}
-  }
-}
-
-\newcommand{\inputFrame}[3]{
-  \frame{
-    \frametitle{{#1}}
-    {#2} \input {#3} % FIXME formatting {#2} doesn't work anymore
-  }
-}
+\input{helpers}
 
 \author{Silesian Ruby Users' Group\\
   \footnotesize{Szymon Nowak}}
 \title{REST}
-
-\setbeamercovered{transparent}
 
 \begin{document}
 \frame{\titlepage}

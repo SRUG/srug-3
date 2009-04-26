@@ -3,20 +3,21 @@
 \centeredFrame{Web services}
 \centeredFrame{what exactly are web services?}
 \centeredFrame{API for web applications}
-\itemizedFrame{examples}{
+\itemizedFrame{some examples:}{
 \item weather
 \item sport results
 \item stock market
 }
 \centeredFrame{a bit of history}
 \centeredFrame{Remote Procedure Call}
+
 \centeredFrame{XML-RPC}
 \centeredFrame{uses XML over HTTP}
-
-\inputFrame{XML RPC sample request}{``\tiny''}{files/xml_rpc_request}
+\inputFrame{XML RPC sample request}{\tiny}{files/xml_rpc_request}
 \inputFrame{XML RPC sample response}{\tiny}{files/xml_rpc_response}
 
 \centeredFrame{this evolved into}
+
 \centeredFrame{SOAP}
 \centeredFrame{\alert{Simple} Object Access Protocol}
 \itemizedFrame{this acronym was dropped with Version 1.2 of the standard}{
@@ -25,8 +26,14 @@
 }
 \centeredFrame{uses XML over HTTP}
 
-\inputFrame{SOAP sample request}{\tiny}{files/soap_request}
-\inputFrame{SOAP sample response}{\tiny}{files/soap_response}
+\frame{
+  \frametitle{SOAP sample request}
+  \scriptsize \input {files/soap_request}
+}
+\frame{
+  \frametitle{SOAP sample response}
+  \scriptsize \input {files/soap_response}
+}
 
 \centeredFrame{services are defined using\\Web Services Description Language\\(WSDL)}
 \itemizedFrame{}{
@@ -34,9 +41,15 @@
 \item client developers see methods with parameters
 }
 
-\inputFrame{WSDL sample}{\tiny}{files/wsdl_begin}
+\frame{
+  \frametitle{WSDL sample}
+  \tiny \input {files/wsdl_begin}
+}
 \centeredFrame{... about 100 lines of XML later ...}
-\inputFrame{WSDL sample}{\tiny}{files/wsdl_end}
+\frame{
+  \frametitle{WSDL sample}
+  \tiny \input {files/wsdl_end}
+}
 
 \itemizedFrame{WS-* specifications}{
   \item WS-Addressing
@@ -50,8 +63,8 @@
   \item WS-MetadataExchange
   \item ...
 }
-
 \imageFrame{images/WS-Standards-Poster.jpg}
+
 \centeredFrame{service oriented design}
 \itemizedFrame{}{
 \item UserManager
@@ -65,6 +78,7 @@
   \item getStatus(u\_id:ID)
   \end{itemize}
 }
+
 \itemizedFrame{Cons of SOAP services:}{
   \item complex
   \item strong typing

@@ -1,0 +1,39 @@
+\section{Consuming RESTful web services}
+
+\centeredFrame{Consuming RESTful web services}
+\itemizedFrame{system tools}{\item cURL}
+\centeredFrame{we get raw XML/JSON response\\that we still need to parse}
+\imageFrame{images/fail.jpg}
+
+\itemizedFrame{Ruby libraries}{
+\item HTTParty
+\item ActiveResource
+}
+
+\centeredFrame{HTTParty}
+\centeredFrame{for RESTful and RESTful-like web services}
+\itemizedFrame{what does it do for you:}{
+\item sends request
+\item processes response
+}
+
+\inputFrame{HTTParty client example}{\tiny}{files/httparty-example}
+\centeredFrame{demo}
+
+\centeredFrame{ActiveResource}
+\centeredFrame{for strictly RESTful web services}
+\itemizedFrame{}{
+\item part of Rails core
+\item works best with Rails apps
+\item provides ActiveRecord like API to RESTful web services
+}
+\itemizedFrame{what does it do for you:}{
+\item forms request URI
+\item sends request
+\item processes response
+\item provides OO access to response
+}
+\centeredFrame{how to write a client?}
+\inputFrame{ActiveResource client example}{\tiny}{files/ar-example}
+\inputFrame{ActiveResource client example}{\tiny}{files/ar-example-2}
+\centeredFrame{demo} % twitter-clone-client
